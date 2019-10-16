@@ -83,7 +83,7 @@ public class CarManager {
 	}
 	
 	//Add car - add to the first available space
-	
+	/*
 	int updateCar(Car car) {
 		int index = -1;
 		
@@ -98,7 +98,7 @@ public class CarManager {
 		}
 		
 		return index; //that has been updated;
-	}
+	} */
 	
 	//Update method
 	
@@ -108,7 +108,7 @@ public class CarManager {
 		for (int i = 0; i < cars.length; i++) {
 			Car temp = cars[i];
 			
-			if (temp != null && temp.getCarID() == car.getCarID) {
+			if (temp != null && temp.getCarID() == car.getCarID()) {
 				cars[i] = car;
 				index = i;
 				break; //stop the looping if found
@@ -118,7 +118,7 @@ public class CarManager {
 		return index; //that has been updated;
 	}
 	
-	int deleteCar(int carID) {
+	int deleteCar(int carID, Car car) {
 		int index = -1;
 		
 		for (int i = 0; i < cars.length; i++) {
